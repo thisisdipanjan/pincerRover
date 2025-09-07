@@ -1,0 +1,16 @@
+i2c Address for the hardwares
+MotorDriver 0x34
+ServoDriver 0x40
+IMU 0x68
+ADC 0x48 >> A0: Waist
+            A1: Wrist
+            A2: Shoulder
+
+
+apt-get install cmake
+apt-get install libgpiod-dev
+
+apt-get update && apt-get install -y \
+    nano less htop curl wget git sudo bash-completion \
+    iputils-ping net-tools unzip tar locales \
+    build-essential
