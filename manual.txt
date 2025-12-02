@@ -9,8 +9,6 @@ ADC 0x48 >> A0: Waist
 
 >> Slam <<
 Mapping slam_toolbox
-        gmapping
-
 Localisation    /odom
                 /imu_data
                 /amcl
@@ -24,3 +22,4 @@ Global planner
 Local planner
 oschestator
 moveit
+fleet management
