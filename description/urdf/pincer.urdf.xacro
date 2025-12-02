@@ -1,0 +1,5 @@
+<xacro:include filename="$(find my_robot)/urdf/rover.xacro"/>
+<xacro:include filename="$(find my_robot)/urdf/manipulator.urdf.xacro"/>
+
+<xacro:ackermann_rover/>
+<xacro:four_dof_arm parent="rear_mount_link"/>
