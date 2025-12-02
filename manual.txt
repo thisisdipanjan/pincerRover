@@ -1,3 +1,4 @@
+>> Systems <<
 i2c Address for the hardwares
 MotorDriver 0x34
 ServoDriver 0x40
@@ -6,11 +7,20 @@ ADC 0x48 >> A0: Waist
             A1: Wrist
             A2: Shoulder
 
+>> Slam <<
+Mapping slam_toolbox
+        gmapping
 
-apt-get install cmake
-apt-get install libgpiod-dev
+Localisation    /odom
+                /imu_data
+                /amcl
+                /qr_code
 
-apt-get update && apt-get install -y \
-    nano less htop curl wget git sudo bash-completion \
-    iputils-ping net-tools unzip tar locales \
-    build-essential
+>> Perception <<
+ydlidar x4      /scan
+
+>> Navigation <<
+Global planner  
+Local planner
+oschestator
+moveit
