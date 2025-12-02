@@ -1,2 +1,82 @@
 <?xml version="1.0"?>
-<robot name="rover" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ackermann_rover">
+
+  <xacro:property name="wheel_radius" value="0.06"/>
+  <xacro:property name="wheel_width" value="0.03"/>
+  <xacro:property name="wheel_base" value="0.30"/>
+  <xacro:property name="track_width" value="0.24"/>
+  <xacro:property name="chassis_length" value="0.42"/>
+  <xacro:property name="chassis_width" value="0.30"/>
+  <xacro:property name="chassis_height" value="0.10"/>
+  <xacro:property name="chassis_mass" value="4.0"/>
+
+  <xacro:property name="imu_x" value="0.10"/>
+  <xacro:property name="imu_z" value="0.12"/>
+  <xacro:property name="lidar_x" value="0.20"/>
+  <xacro:property name="lidar_z" value="0.18"/>
+
+  <link name="base_link">
+    <inertial><origin xyz="0 0 0"/><mass value="${chassis_mass}"/><inertia ixx="0.03" iyy="0.03" izz="0.04"/></inertial>
+    <visual><origin xyz="0 0 ${chassis_height/2}"/><geometry><box size="${chassis_length} ${chassis_width} ${chassis_height}"/></geometry></visual>
+    <collision><origin xyz="0 0 ${chassis_height/2}"/><geometry><box size="${chassis_length} ${chassis_width} ${chassis_height}"/></geometry></collision>
+  </link>
+
+  <xacro:macro name="wheel" params="name">
+    <link name="${name}_link">
+      <visual><geometry><cylinder length="${wheel_width}" radius="${wheel_radius}"/></geometry></visual>
+      <collision><geometry><cylinder length="${wheel_width}" radius="${wheel_radius}"/></geometry></collision>
+      <inertial><origin xyz="0 0 0"/><mass value="0.15"/></inertial>
+    </link>
+  </xacro:macro>
+
+  <xacro:macro name="steer_knuckle" params="name x y z">
+    <link name="${name}_steer_link">
+      <visual><geometry><box size="0.06 0.06 0.02"/></geometry></visual>
+    </link>
+    <joint name="${name}_steer_joint" type="revolute">
+      <parent link="base_link"/><child link="${name}_steer_link"/>
+      <origin xyz="${x} ${y} ${z}"/><axis xyz="0 0 1"/>
+      <limit lower="-1.0" upper="1.0"/>
+    </joint>
+  </xacro:macro>
+
+  <xacro:property name="front_x" value="${wheel_base/2}"/>
+  <xacro:property name="rear_x" value="-${wheel_base/2}"/>
+  <xacro:property name="left_y" value="${track_width/2}"/>
+  <xacro:property name="right_y" value="-${track_width/2}"/>
+  <xacro:property name="wheel_z" value="${wheel_radius}"/>
+
+  <xacro:steer_knuckle name="front_left" x="${front_x}" y="${left_y}" z="${wheel_z}"/>
+  <xacro:steer_knuckle name="front_right" x="${front_x}" y="${right_y}" z="${wheel_z}"/>
+
+  <xacro:wheel name="front_left_wheel"/>
+  <joint name="front_left_wheel_joint" type="continuous">
+    <parent link="front_left_steer_link"/><child link="front_left_wheel_link"/>
+    <origin rpy="0 1.5708 0"/><axis xyz="0 1 0"/>
+  </joint>
+
+  <xacro:wheel name="front_right_wheel"/>
+  <joint name="front_right_wheel_joint" type="continuous">
+    <parent link="front_right_steer_link"/><child link="front_right_wheel_link"/>
+    <origin rpy="0 1.5708 0"/><axis xyz="0 1 0"/>
+  </joint>
+
+  <xacro:wheel name="rear_left_wheel"/>
+  <joint name="rear_left_wheel_joint" type="continuous">
+    <parent link="base_link"/><child link="rear_left_wheel_link"/>
+    <origin xyz="${rear_x} ${left_y} ${wheel_z}" rpy="0 1.5708 0"/><axis xyz="0 1 0"/>
+  </joint>
+
+  <xacro:wheel name="rear_right_wheel"/>
+  <joint name="rear_right_wheel_joint" type="continuous">
+    <parent link="base_link"/><child link="rear_right_wheel_link"/>
+    <origin xyz="${rear_x} ${right_y} ${wheel_z}" rpy="0 1.5708 0"/><axis xyz="0 1 0"/>
+  </joint>
+
+  <link name="imu_link"><visual><geometry><sphere radius="0.02"/></geometry></visual></link>
+  <joint name="imu_joint" type="fixed"><parent link="base_link"/><child link="imu_link"/><origin xyz="${imu_x} 0 ${imu_z}"/></joint>
+
+  <link name="lidar_link"><visual><geometry><cylinder radius="0.03" length="0.02"/></geometry></visual></link>
+  <joint name="lidar_joint" type="fixed"><parent link="base_link"/><child link="lidar_link"/><origin xyz="${lidar_x} 0 ${lidar_z}"/></joint>
+
+</robot>
