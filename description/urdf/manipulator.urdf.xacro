@@ -1,2 +1,129 @@
 <?xml version="1.0"?>
 <robot name="manipulator" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Parameters -->
+  <xacro:property name="arm_base_height" value="0.2"/>
+  <xacro:property name="link_radius" value="0.03"/>
+  <xacro:property name="link_length1" value="0.25"/>
+  <xacro:property name="link_length2" value="0.20"/>
+  <xacro:property name="link_length3" value="0.15"/>
+  <xacro:property name="finger_length" value="0.08"/>
+
+  <!-- Base Link -->
+  <link name="arm_base_link">
+    <visual>
+      <origin xyz="0 0 ${arm_base_height/2}"/>
+      <geometry>
+        <cylinder radius="${link_radius}" length="${arm_base_height}"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- Joint 1 -->
+  <joint name="joint1" type="revolute">
+    <parent link="arm_base_link"/>
+    <child link="link1"/>
+    <origin xyz="0 0 ${arm_base_height}"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-3.14" upper="3.14" effort="10" velocity="1"/>
+  </joint>
+
+  <link name="link1">
+    <visual>
+      <origin xyz="0 0 ${link_length1/2}"/>
+      <geometry>
+        <cylinder radius="${link_radius}" length="${link_length1}"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- Joint 2 -->
+  <joint name="joint2" type="revolute">
+    <parent link="link1"/>
+    <child link="link2"/>
+    <origin xyz="0 0 ${link_length1}"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="1.57" effort="8" velocity="1"/>
+  </joint>
+
+  <link name="link2">
+    <visual>
+      <origin xyz="0 0 ${link_length2/2}"/>
+      <geometry>
+        <cylinder radius="${link_radius}" length="${link_length2}"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- Joint 3 -->
+  <joint name="joint3" type="revolute">
+    <parent link="link2"/>
+    <child link="link3"/>
+    <origin xyz="0 0 ${link_length2}"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="1.57" effort="8" velocity="1"/>
+  </joint>
+
+  <link name="link3">
+    <visual>
+      <origin xyz="0 0 ${link_length3/2}"/>
+      <geometry>
+        <cylinder radius="${link_radius}" length="${link_length3}"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- Joint 4 (Wrist) -->
+  <joint name="joint4" type="revolute">
+    <parent link="link3"/>
+    <child link="gripper_mount"/>
+    <origin xyz="0 0 ${link_length3}"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57" upper="1.57" effort="5" velocity="1"/>
+  </joint>
+
+  <link name="gripper_mount">
+    <visual>
+      <origin xyz="0 0 0.02"/>
+      <geometry>
+        <box size="0.05 0.05 0.05"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- Gripper -->
+  <joint name="left_finger_joint" type="prismatic">
+    <parent link="gripper_mount"/>
+    <child link="left_finger"/>
+    <origin xyz="0.03 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="0" upper="0.04" effort="2" velocity="0.2"/>
+  </joint>
+
+  <link name="left_finger">
+    <visual>
+      <origin xyz="${finger_length/2} 0 0"/>
+      <geometry>
+        <box size="${finger_length} 0.01 0.02"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="right_finger_joint" type="prismatic">
+    <parent link="gripper_mount"/>
+    <child link="right_finger"/>
+    <origin xyz="-0.03 0 0"/>
+    <axis xyz="-1 0 0"/>
+    <limit lower="0" upper="0.04" effort="2" velocity="0.2"/>
+  </joint>
+
+  <link name="right_finger">
+    <visual>
+      <origin xyz="-${finger_length/2} 0 0"/>
+      <geometry>
+        <box size="${finger_length} 0.01 0.02"/>
+      </geometry>
+    </visual>
+  </link>
+
+</robot>
