@@ -14,6 +14,7 @@ SERVO_I2C_ADDR = 0x40
 MODE1 = 0x00
 PRESCALE = 0xFE
 LED0_ON_L = 0x06
+ENC_BASE = 0x3C
 
 def motor_write(reg, data_list):
     bus.write_i2c_block_data(MOTOR_I2C_ADDR, reg, data_list)
