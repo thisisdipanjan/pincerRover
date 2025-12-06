@@ -11,7 +11,7 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
     ],
-    install_requires=['setuptools', 'smbus2', 'adafruit-circuitpython-pca9685'],
+    install_requires=['setuptools', 'tf-transformations', 'smbus2'],
     zip_safe=True,
     maintainer='Dipanjan Maji',
     maintainer_email='mdipanjan2002@gmail.com',

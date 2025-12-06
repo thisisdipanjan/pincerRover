@@ -5,14 +5,15 @@ import smbus
 import time
 
 bus = smbus.SMBus(1)
-
 MOTOR_I2C_ADDR = 0x34
 MOTOR_TYPE_ADDR = 20
 MOTOR_ENCODER_POLARITY_ADDR = 21
 MOTOR_FIXED_SPEED_ADDR = 51
-
 MOTOR_TYPE_JGB37_520_12V_110RPM = 3
-
+SERVO_I2C_ADDR = 0x40
+MODE1 = 0x00
+PRESCALE = 0xFE
+LED0_ON_L = 0x06
 
 def motor_write(reg, data_list):
     bus.write_i2c_block_data(MOTOR_I2C_ADDR, reg, data_list)
@@ -27,12 +28,6 @@ def init_motor():
 
 def drive_motors(m1, m2, m3, m4):
     motor_write(MOTOR_FIXED_SPEED_ADDR, [m1, m2, m3, m4])
-
-
-SERVO_I2C_ADDR = 0x40
-MODE1 = 0x00
-PRESCALE = 0xFE
-LED0_ON_L = 0x06
 
 
 def init_servo(freq=50):
@@ -74,34 +69,26 @@ class AckermannDriveNode(Node):
 
         self.get_logger().info("PincerRover node executing.")
         self.servo_ch = 0
+        self.steering = 90
 
     
     def cmd_vel_callback(self, msg):
-        linear = -msg.linear.x        # Forward speed
-        angular = -msg.angular.z      # Steering value
-
-        # ---- Motor speed conversion ----
-        # linear.x [-1.0 ... +1.0]
-        speed = int(linear * 50)  # scale to motor usable range
-
-        # All 4 wheels same for now
+        linear = -msg.linear.x       
+        angular = -msg.angular.z  
+        speed = int(linear * 50)
         drive_motors(speed, speed, speed, speed)
 
-        # ---- Steering conversion ----
-        # angular.z (-0.5 to +0.5 typical)
-        steering = 90 + (angular * 60)  # ±60° steering
-
-        steering = max(5, min(115, steering))  # clamp
-        set_angle(self.servo_ch, steering)
+        self.steering += (angular*10)
+        if angular!=0:
+            self.steering = max(40, min(150, self.steering))
+        else:
+            self.steering = 95
+        set_angle(self.servo_ch, self.steering)
 
         self.get_logger().info(
-            f"speed={speed}, steering_angle={steering}"
+            f"speed={speed}, steering_angle={self.steering}"
         )
 
-
-# =======================================================
-# MAIN
-# =======================================================
 def main(args=None):
     rclpy.init(args=args)
     node = AckermannDriveNode()
