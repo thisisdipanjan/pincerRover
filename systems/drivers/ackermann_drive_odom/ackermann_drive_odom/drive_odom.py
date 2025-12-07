@@ -26,8 +26,8 @@ class AckermannNode(Node):
     PRESCALE = 0xFE
     LED0_ON_L = 0x06
 
-    WHEEL_RADIUS = 0.035
-    TICKS_PER_REV = 360
+    WHEEL_RADIUS = 0.034
+    TICKS_PER_REV = 1316
     WHEEL_BASE = 0.175
 
     def __init__(self):
@@ -111,8 +111,8 @@ class AckermannNode(Node):
 
 
     def cmd_vel_callback(self, msg):
-        linear = msg.linear.x
-        angular = msg.angular.z
+        linear = -msg.linear.x
+        angular = -msg.angular.z
 
         motor_speed = int(linear * 50)
         self.drive_motors(motor_speed)

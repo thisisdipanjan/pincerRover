@@ -24,7 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-        'drive_node = ackermann_drive.drive_odom:main',
+        'drive_node = ackermann_drive_odom.drive_odom:main',
         ],
     },
 )

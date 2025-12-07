@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'adc_feedback'
+package_name = 'safety_field'
 
 setup(
     name=package_name,
@@ -24,6 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+        'safety_node = safety_field.safety:main',
         ],
     },
 )
