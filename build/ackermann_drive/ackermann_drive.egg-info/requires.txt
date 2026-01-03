@@ -1,0 +1,6 @@
+setuptools
+smbus2
+tf-transformations
+
+[test]
+pytest

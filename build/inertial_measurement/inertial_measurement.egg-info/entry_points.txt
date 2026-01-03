@@ -1,0 +1,2 @@
+[console_scripts]
+imu_node = mpu6886.imu_node:main

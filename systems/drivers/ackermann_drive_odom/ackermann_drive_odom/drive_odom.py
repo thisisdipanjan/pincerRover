@@ -8,7 +8,7 @@ from math import sin, cos
 import smbus
 import struct
 import time
-
+import threading
 
 class AckermannNode(Node):
 
@@ -40,9 +40,9 @@ class AckermannNode(Node):
         self.tf_pub = TransformBroadcaster(self)
 
         self.bus = smbus.SMBus(1)
+        self.i2c_lock = threading.Lock()  # <-- Mutex for all I2C access
 
         self.init_motors()
-
         self.init_servo()
 
         self.prev_left = 0
@@ -56,47 +56,58 @@ class AckermannNode(Node):
         self.servo_ch = 0
 
         self.last_time = time.time()
-        self.create_timer(0.02, self.update) 
+        self.create_timer(0.02, self.update)
 
         self.get_logger().info("Drive node running.")
 
 
+    # ---- Thread-safe I2C wrappers ----
     def write_motor(self, reg, data):
-        self.bus.write_i2c_block_data(self.MOTOR_ADDR, reg, data)
+        with self.i2c_lock:
+            self.bus.write_i2c_block_data(self.MOTOR_ADDR, reg, data)
 
     def read_encoder_raw(self, motor_id):
         addr = self.ENC_BASE + (motor_id * 4)
-        raw = self.bus.read_i2c_block_data(self.MOTOR_ADDR, addr, 4)
+        with self.i2c_lock:
+            raw = self.bus.read_i2c_block_data(self.MOTOR_ADDR, addr, 4)
         return struct.unpack('<i', bytes(raw))[0]
 
+    def write_servo_byte(self, reg, val):
+        with self.i2c_lock:
+            self.bus.write_byte_data(self.SERVO_ADDR, reg, val)
 
+    def write_servo_block(self, reg, vals):
+        with self.i2c_lock:
+            for i, v in enumerate(vals):
+                self.bus.write_byte_data(self.SERVO_ADDR, reg + i, v)
+
+
+    # ---- Motor + Servo init ----
     def init_motors(self):
         self.write_motor(self.MOTOR_TYPE_ADDR, [self.MOTOR_TYPE_JGB37])
         time.sleep(0.01)
-
         self.write_motor(self.MOTOR_POLARITY_ADDR, [0])
         time.sleep(0.01)
-
         self.write_motor(self.ENC_BASE, [0] * 16)
         time.sleep(0.01)
 
     def init_servo(self, freq=50):
-        self.bus.write_byte_data(self.SERVO_ADDR, self.MODE1, 0x00)
+        self.write_servo_byte(self.MODE1, 0x00)
         time.sleep(0.005)
-
         prescale_val = int(25000000.0 / (4096 * freq) - 1)
-        self.bus.write_byte_data(self.SERVO_ADDR, self.MODE1, 0x10)
-        self.bus.write_byte_data(self.SERVO_ADDR, self.PRESCALE, prescale_val)
-        self.bus.write_byte_data(self.SERVO_ADDR, self.MODE1, 0x80)
+        self.write_servo_byte(self.MODE1, 0x10)
+        self.write_servo_byte(self.PRESCALE, prescale_val)
+        self.write_servo_byte(self.MODE1, 0x80)
         time.sleep(0.005)
 
 
+    # ---- Servo helpers ----
     def set_pwm(self, channel, on, off):
         reg = self.LED0_ON_L + 4 * channel
-        self.bus.write_byte_data(self.SERVO_ADDR, reg, on & 0xFF)
-        self.bus.write_byte_data(self.SERVO_ADDR, reg + 1, on >> 8)
-        self.bus.write_byte_data(self.SERVO_ADDR, reg + 2, off & 0xFF)
-        self.bus.write_byte_data(self.SERVO_ADDR, reg + 3, off >> 8)
+        self.write_servo_byte(reg, on & 0xFF)
+        self.write_servo_byte(reg+1, on >> 8)
+        self.write_servo_byte(reg+2, off & 0xFF)
+        self.write_servo_byte(reg+3, off >> 8)
 
     def set_angle(self, channel, angle):
         pulse_min = 150
@@ -105,11 +116,13 @@ class AckermannNode(Node):
         self.set_pwm(channel, 0, pulse)
 
 
+    # ---- Motor speed ----
     def drive_motors(self, speed):
         val = int(max(-100, min(100, speed)))
         self.write_motor(self.MOTOR_SPEED_ADDR, [val, val, val, val])
 
 
+    # ---- Cmd_vel callback ----
     def cmd_vel_callback(self, msg):
         linear = -msg.linear.x
         angular = -msg.angular.z
@@ -126,6 +139,7 @@ class AckermannNode(Node):
         self.set_angle(self.servo_ch, self.steering_angle)
 
 
+    # ---- Odometry update ----
     def update(self):
         now = time.time()
         dt = now - self.last_time
@@ -153,7 +167,7 @@ class AckermannNode(Node):
         self.publish_odom()
 
 
-
+    # ---- Publish odometry + TF ----
     def publish_odom(self):
         odom = Odometry()
         odom.header.stamp = self.get_clock().now().to_msg()

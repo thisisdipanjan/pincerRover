@@ -1,0 +1,2 @@
+[console_scripts]
+drive_node = ackermann_drive.drive_node:main

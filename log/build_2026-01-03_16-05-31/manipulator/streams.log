@@ -1,0 +1,32 @@
+[2.210s] Invoking command in '/home/ros2/ros2_ws/src/pincerRover/moveit/manipulator': PYTHONPATH=/home/ros2/ros2_ws/src/pincerRover/build/manipulator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ros2/ros2_ws/src/pincerRover/install/manipulator/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/manipulator build --build-base /home/ros2/ros2_ws/src/pincerRover/build/manipulator/build install --record /home/ros2/ros2_ws/src/pincerRover/build/manipulator/install.log --single-version-externally-managed install_data
+[2.565s] running egg_info
+[2.565s] creating ../../build/manipulator/manipulator.egg-info
+[2.596s] writing ../../build/manipulator/manipulator.egg-info/PKG-INFO
+[2.597s] writing dependency_links to ../../build/manipulator/manipulator.egg-info/dependency_links.txt
+[2.597s] writing requirements to ../../build/manipulator/manipulator.egg-info/requires.txt
+[2.597s] writing top-level names to ../../build/manipulator/manipulator.egg-info/top_level.txt
+[2.597s] writing manifest file '../../build/manipulator/manipulator.egg-info/SOURCES.txt'
+[2.650s] reading manifest file '../../build/manipulator/manipulator.egg-info/SOURCES.txt'
+[2.650s] writing manifest file '../../build/manipulator/manipulator.egg-info/SOURCES.txt'
+[2.651s] running build
+[2.651s] running build_py
+[2.651s] creating /home/ros2/ros2_ws/src/pincerRover/build/manipulator/build
+[2.652s] creating /home/ros2/ros2_ws/src/pincerRover/build/manipulator/build/lib
+[2.652s] creating /home/ros2/ros2_ws/src/pincerRover/build/manipulator/build/lib/manipulator
+[2.652s] copying manipulator/__init__.py -> /home/ros2/ros2_ws/src/pincerRover/build/manipulator/build/lib/manipulator
+[2.652s] running install
+[2.658s] running install_lib
+[2.691s] creating /home/ros2/ros2_ws/src/pincerRover/install/manipulator/lib/python3.12/site-packages/manipulator
+[2.691s] copying /home/ros2/ros2_ws/src/pincerRover/build/manipulator/build/lib/manipulator/__init__.py -> /home/ros2/ros2_ws/src/pincerRover/install/manipulator/lib/python3.12/site-packages/manipulator
+[2.692s] byte-compiling /home/ros2/ros2_ws/src/pincerRover/install/manipulator/lib/python3.12/site-packages/manipulator/__init__.py to __init__.cpython-312.pyc
+[2.692s] running install_data
+[2.692s] creating /home/ros2/ros2_ws/src/pincerRover/install/manipulator/share/ament_index
+[2.693s] creating /home/ros2/ros2_ws/src/pincerRover/install/manipulator/share/ament_index/resource_index
+[2.693s] creating /home/ros2/ros2_ws/src/pincerRover/install/manipulator/share/ament_index/resource_index/packages
+[2.693s] copying resource/manipulator -> /home/ros2/ros2_ws/src/pincerRover/install/manipulator/share/ament_index/resource_index/packages
+[2.693s] copying package.xml -> /home/ros2/ros2_ws/src/pincerRover/install/manipulator/share/manipulator
+[2.694s] running install_egg_info
+[2.724s] Copying ../../build/manipulator/manipulator.egg-info to /home/ros2/ros2_ws/src/pincerRover/install/manipulator/lib/python3.12/site-packages/manipulator-0.0.0-py3.12.egg-info
+[2.726s] running install_scripts
+[2.911s] writing list of installed files to '/home/ros2/ros2_ws/src/pincerRover/build/manipulator/install.log'
+[3.006s] Invoked command in '/home/ros2/ros2_ws/src/pincerRover/moveit/manipulator' returned '0': PYTHONPATH=/home/ros2/ros2_ws/src/pincerRover/build/manipulator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ros2/ros2_ws/src/pincerRover/install/manipulator/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/manipulator build --build-base /home/ros2/ros2_ws/src/pincerRover/build/manipulator/build install --record /home/ros2/ros2_ws/src/pincerRover/build/manipulator/install.log --single-version-externally-managed install_data

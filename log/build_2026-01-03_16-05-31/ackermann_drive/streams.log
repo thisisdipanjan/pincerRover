@@ -1,0 +1,37 @@
+[2.237s] Invoking command in '/home/ros2/ros2_ws/src/pincerRover/systems/ros2_drivers/ackermann_drive': PYTHONPATH=/home/ros2/ros2_ws/src/pincerRover/build/ackermann_drive/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ros2/ros2_ws/src/pincerRover/install/ackermann_drive/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/ackermann_drive build --build-base /home/ros2/ros2_ws/src/pincerRover/build/ackermann_drive/build install --record /home/ros2/ros2_ws/src/pincerRover/build/ackermann_drive/install.log --single-version-externally-managed install_data
+[2.607s] running egg_info
+[2.607s] creating ../../../build/ackermann_drive/ackermann_drive.egg-info
+[2.637s] writing ../../../build/ackermann_drive/ackermann_drive.egg-info/PKG-INFO
+[2.637s] writing dependency_links to ../../../build/ackermann_drive/ackermann_drive.egg-info/dependency_links.txt
+[2.638s] writing entry points to ../../../build/ackermann_drive/ackermann_drive.egg-info/entry_points.txt
+[2.638s] writing requirements to ../../../build/ackermann_drive/ackermann_drive.egg-info/requires.txt
+[2.638s] writing top-level names to ../../../build/ackermann_drive/ackermann_drive.egg-info/top_level.txt
+[2.638s] writing manifest file '../../../build/ackermann_drive/ackermann_drive.egg-info/SOURCES.txt'
+[2.712s] reading manifest file '../../../build/ackermann_drive/ackermann_drive.egg-info/SOURCES.txt'
+[2.713s] writing manifest file '../../../build/ackermann_drive/ackermann_drive.egg-info/SOURCES.txt'
+[2.713s] running build
+[2.714s] running build_py
+[2.714s] creating /home/ros2/ros2_ws/src/pincerRover/build/ackermann_drive/build
+[2.714s] creating /home/ros2/ros2_ws/src/pincerRover/build/ackermann_drive/build/lib
+[2.714s] creating /home/ros2/ros2_ws/src/pincerRover/build/ackermann_drive/build/lib/ackermann_drive
+[2.715s] copying ackermann_drive/__init__.py -> /home/ros2/ros2_ws/src/pincerRover/build/ackermann_drive/build/lib/ackermann_drive
+[2.715s] copying ackermann_drive/drive_node.py -> /home/ros2/ros2_ws/src/pincerRover/build/ackermann_drive/build/lib/ackermann_drive
+[2.716s] running install
+[2.722s] running install_lib
+[2.752s] creating /home/ros2/ros2_ws/src/pincerRover/install/ackermann_drive/lib/python3.12/site-packages/ackermann_drive
+[2.753s] copying /home/ros2/ros2_ws/src/pincerRover/build/ackermann_drive/build/lib/ackermann_drive/__init__.py -> /home/ros2/ros2_ws/src/pincerRover/install/ackermann_drive/lib/python3.12/site-packages/ackermann_drive
+[2.753s] copying /home/ros2/ros2_ws/src/pincerRover/build/ackermann_drive/build/lib/ackermann_drive/drive_node.py -> /home/ros2/ros2_ws/src/pincerRover/install/ackermann_drive/lib/python3.12/site-packages/ackermann_drive
+[2.753s] byte-compiling /home/ros2/ros2_ws/src/pincerRover/install/ackermann_drive/lib/python3.12/site-packages/ackermann_drive/__init__.py to __init__.cpython-312.pyc
+[2.754s] byte-compiling /home/ros2/ros2_ws/src/pincerRover/install/ackermann_drive/lib/python3.12/site-packages/ackermann_drive/drive_node.py to drive_node.cpython-312.pyc
+[2.756s] running install_data
+[2.756s] creating /home/ros2/ros2_ws/src/pincerRover/install/ackermann_drive/share/ament_index
+[2.756s] creating /home/ros2/ros2_ws/src/pincerRover/install/ackermann_drive/share/ament_index/resource_index
+[2.757s] creating /home/ros2/ros2_ws/src/pincerRover/install/ackermann_drive/share/ament_index/resource_index/packages
+[2.757s] copying resource/ackermann_drive -> /home/ros2/ros2_ws/src/pincerRover/install/ackermann_drive/share/ament_index/resource_index/packages
+[2.758s] copying package.xml -> /home/ros2/ros2_ws/src/pincerRover/install/ackermann_drive/share/ackermann_drive
+[2.758s] running install_egg_info
+[2.799s] Copying ../../../build/ackermann_drive/ackermann_drive.egg-info to /home/ros2/ros2_ws/src/pincerRover/install/ackermann_drive/lib/python3.12/site-packages/ackermann_drive-0.0.0-py3.12.egg-info
+[2.801s] running install_scripts
+[2.971s] Installing drive_node script to /home/ros2/ros2_ws/src/pincerRover/install/ackermann_drive/lib/ackermann_drive
+[2.973s] writing list of installed files to '/home/ros2/ros2_ws/src/pincerRover/build/ackermann_drive/install.log'
+[3.061s] Invoked command in '/home/ros2/ros2_ws/src/pincerRover/systems/ros2_drivers/ackermann_drive' returned '0': PYTHONPATH=/home/ros2/ros2_ws/src/pincerRover/build/ackermann_drive/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ros2/ros2_ws/src/pincerRover/install/ackermann_drive/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/ackermann_drive build --build-base /home/ros2/ros2_ws/src/pincerRover/build/ackermann_drive/build install --record /home/ros2/ros2_ws/src/pincerRover/build/ackermann_drive/install.log --single-version-externally-managed install_data

@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'inertial_measurement'
+package_name = 'mpu6886'
 
 setup(
     name=package_name,
@@ -24,7 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-		'imu_node = inertial_measurement.imu_node:main',
+		'imu_node = mpu6886.imu_node:main',
         ],
     },
 )
