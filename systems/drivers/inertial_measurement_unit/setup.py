@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'safety_field'
+package_name = 'inertial_measurement_unit'
 
 setup(
     name=package_name,
@@ -11,7 +11,7 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
     ],
-    install_requires=['setuptools'],
+    install_requires=['setuptools', 'smbus2'],
     zip_safe=True,
     maintainer='ubuntu',
     maintainer_email='mdipanjan2002@gmail.com',
@@ -24,7 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-        'safety_node = safety_field.safety:main',
+        'imu_node = inertial_measurement_unit.imu_node:main',
         ],
     },
 )

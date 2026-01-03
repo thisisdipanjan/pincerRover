@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'ackermann_drive_odom'
+package_name = 'ackermann_drive_servo_arm'
 
 setup(
     name=package_name,
@@ -11,11 +11,11 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
     ],
-    install_requires=['setuptools', 'tf-transformations', 'smbus2'],
+    install_requires=['setuptools', 'smbus2'],
     zip_safe=True,
-    maintainer='Dipanjan Maji',
+    maintainer='ubuntu',
     maintainer_email='mdipanjan2002@gmail.com',
-    description='Ackermann steering controller for HiWonder motor driver with odometry',
+    description='TODO: Package description',
     license='TODO: License declaration',
     extras_require={
         'test': [
@@ -24,9 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-        'drive_node = ackermann_drive_odom.drive_odom:main',
+        'drive_servo_node = ackermann_drive_servo_arm.drive_servo:main',
         ],
     },
 )
-
-
