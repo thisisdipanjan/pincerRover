@@ -1,0 +1,15 @@
+idf_component_register(
+    SRCS
+        app_main.cpp
+        i2c_bus.cpp
+        imu_mpu6886.cpp
+        motor_driver.cpp
+        servo_pca9685.cpp
+        encoder_odometry.cpp
+        usb_serial.cpp
+    INCLUDE_DIRS
+        ../include
+    REQUIRES
+        driver
+        freertos
+)
