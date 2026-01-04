@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'pincer_bringup'
+package_name = 'bringup'
 
 setup(
     name=package_name,
@@ -13,8 +13,8 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='ubuntu',
-    maintainer_email='mdipanjan2002@gmail.com',
+    maintainer='rpi5',
+    maintainer_email='rpi5@todo.todo',
     description='TODO: Package description',
     license='TODO: License declaration',
     extras_require={
