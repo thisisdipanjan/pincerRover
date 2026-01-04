@@ -1,2 +1,0 @@
-[console_scripts]
-safety_node = safety_field.safety:main
