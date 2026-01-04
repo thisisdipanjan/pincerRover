@@ -23,3 +23,9 @@ Local planner
 oschestator
 moveit
 fleet management
+
+
+>> thirdparty repos <<
+run thirdpart.sh
+chmod +x thirdparty.sh
+./thirdparty.sh

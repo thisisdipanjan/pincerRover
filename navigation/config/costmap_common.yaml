@@ -1,0 +1,12 @@
+obstacle_layer:
+  observation_sources: scan
+  scan:
+    topic: /scan
+    sensor_frame: lidar_link
+    clearing: true
+    marking: true
+    data_type: LaserScan
+
+inflation_layer:
+  inflation_radius: 0.55
+  cost_scaling_factor: 10.0
