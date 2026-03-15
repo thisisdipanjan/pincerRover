@@ -1,4 +1,4 @@
-# Install script for directory: /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/json
+# Install script for directory: /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/json
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

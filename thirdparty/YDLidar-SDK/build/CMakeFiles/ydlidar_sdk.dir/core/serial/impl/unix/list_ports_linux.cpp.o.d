@@ -1,5 +1,5 @@
 CMakeFiles/ydlidar_sdk.dir/core/serial/impl/unix/list_ports_linux.cpp.o: \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/serial/impl/unix/list_ports_linux.cpp \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/serial/impl/unix/list_ports_linux.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/13/vector \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/aarch64-linux-gnu/c++/13/bits/c++config.h \
@@ -176,11 +176,11 @@ CMakeFiles/ydlidar_sdk.dir/core/serial/impl/unix/list_ports_linux.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/getopt_core.h \
  /usr/include/aarch64-linux-gnu/bits/unistd_ext.h \
  /usr/include/linux/close_range.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/serial/serial.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/serial/serial.h \
  /usr/include/c++/13/limits /usr/include/c++/13/cstring \
  /usr/include/string.h /usr/include/strings.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/v8stdint.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/datatype.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/v8stdint.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/datatype.h \
  /usr/include/c++/13/stdlib.h /usr/include/signal.h \
  /usr/include/aarch64-linux-gnu/bits/signum-generic.h \
  /usr/include/aarch64-linux-gnu/bits/signum-arch.h \
@@ -213,9 +213,9 @@ CMakeFiles/ydlidar_sdk.dir/core/serial/impl/unix/list_ports_linux.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/sigthread.h \
  /usr/include/aarch64-linux-gnu/bits/signal_ext.h \
  /usr/include/c++/13/csignal \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/typedef.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/typedef.h \
  /usr/lib/gcc/aarch64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/aarch64-linux-gnu/bits/stdint-least.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/ydlidar.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/common/ChannelDevice.h
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/ydlidar.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/common/ChannelDevice.h

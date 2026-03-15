@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/. -I/home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core -I/home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/src -I/home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK -I/home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/.. -I/home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build/examples -I/home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build
+C_INCLUDES = -I/home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/. -I/home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core -I/home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/src -I/home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK -I/home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/.. -I/home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build/examples -I/home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build
 
 C_FLAGS = -fPIC -std=c++11
 

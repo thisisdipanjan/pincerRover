@@ -1,5 +1,5 @@
 CMakeFiles/ydlidar_sdk.dir/core/json/cJSON.c.o: \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/json/cJSON.c \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/json/cJSON.c \
  /usr/include/stdc-predef.h /usr/include/string.h \
  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -68,4 +68,4 @@ CMakeFiles/ydlidar_sdk.dir/core/json/cJSON.c.o: \
  /usr/include/aarch64-linux-gnu/bits/pthread_stack_min.h \
  /usr/include/aarch64-linux-gnu/bits/posix2_lim.h /usr/include/ctype.h \
  /usr/lib/gcc/aarch64-linux-gnu/13/include/float.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/json/cJSON.h
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/json/cJSON.h

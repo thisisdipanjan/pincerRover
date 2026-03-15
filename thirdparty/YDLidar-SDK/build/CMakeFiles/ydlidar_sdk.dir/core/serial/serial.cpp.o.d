@@ -1,5 +1,5 @@
 CMakeFiles/ydlidar_sdk.dir/core/serial/serial.cpp.o: \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/serial/serial.cpp \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/serial/serial.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/13/algorithm \
  /usr/include/c++/13/bits/stl_algobase.h \
  /usr/include/aarch64-linux-gnu/c++/13/bits/c++config.h \
@@ -69,7 +69,7 @@ CMakeFiles/ydlidar_sdk.dir/core/serial/serial.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/struct_rwlock.h \
  /usr/include/alloca.h /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/13/bits/std_abs.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/serial/serial.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/serial/serial.h \
  /usr/include/c++/13/limits /usr/include/c++/13/vector \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/c++/13/bits/allocator.h \
@@ -158,8 +158,8 @@ CMakeFiles/ydlidar_sdk.dir/core/serial/serial.cpp.o: \
  /usr/include/c++/13/bits/ostream.tcc \
  /usr/include/c++/13/bits/istream.tcc \
  /usr/include/c++/13/bits/sstream.tcc \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/v8stdint.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/datatype.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/v8stdint.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/datatype.h \
  /usr/include/c++/13/stdlib.h /usr/include/signal.h \
  /usr/include/aarch64-linux-gnu/bits/signum-generic.h \
  /usr/include/aarch64-linux-gnu/bits/signum-arch.h \
@@ -212,14 +212,14 @@ CMakeFiles/ydlidar_sdk.dir/core/serial/serial.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/statx-generic.h \
  /usr/include/aarch64-linux-gnu/bits/types/struct_statx_timestamp.h \
  /usr/include/aarch64-linux-gnu/bits/types/struct_statx.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/typedef.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/typedef.h \
  /usr/lib/gcc/aarch64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/aarch64-linux-gnu/bits/stdint-least.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/ydlidar.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/common/ChannelDevice.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/serial/common.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/serial/impl/unix/unix.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/ydlidar.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/common/ChannelDevice.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/serial/common.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/serial/impl/unix/unix.h \
  /usr/include/assert.h /usr/include/c++/13/math.h \
  /usr/include/c++/13/cmath /usr/include/math.h \
  /usr/include/aarch64-linux-gnu/bits/math-vector.h \
@@ -243,7 +243,7 @@ CMakeFiles/ydlidar_sdk.dir/core/serial/serial.cpp.o: \
  /usr/include/asm-generic/ioctl.h \
  /usr/include/aarch64-linux-gnu/bits/ioctl-types.h \
  /usr/include/aarch64-linux-gnu/sys/ttydefaults.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/serial/impl/unix/unix_serial.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/serial/impl/unix/unix_serial.h \
  /usr/include/termios.h /usr/include/aarch64-linux-gnu/bits/termios.h \
  /usr/include/aarch64-linux-gnu/bits/termios-struct.h \
  /usr/include/aarch64-linux-gnu/bits/termios-c_cc.h \
@@ -254,10 +254,10 @@ CMakeFiles/ydlidar_sdk.dir/core/serial/serial.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/termios-c_lflag.h \
  /usr/include/aarch64-linux-gnu/bits/termios-tcflow.h \
  /usr/include/aarch64-linux-gnu/bits/termios-misc.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/serial/serial.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/thread.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/v8stdint.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/timer.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/serial/serial.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/thread.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/v8stdint.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/timer.h \
  /usr/include/inttypes.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/utils.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/locker.h
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/utils.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/locker.h

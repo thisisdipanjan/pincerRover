@@ -1,5 +1,5 @@
 examples/CMakeFiles/lidar_c_api_test.dir/lidar_c_api_test.c.o: \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/examples/lidar_c_api_test.c \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/examples/lidar_c_api_test.c \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -59,12 +59,12 @@ examples/CMakeFiles/lidar_c_api_test.dir/lidar_c_api_test.c.o: \
  /usr/include/aarch64-linux-gnu/bits/getopt_posix.h \
  /usr/include/aarch64-linux-gnu/bits/getopt_core.h \
  /usr/include/aarch64-linux-gnu/bits/unistd_ext.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/src/ydlidar_sdk.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/src/ydlidar_sdk.h \
  /usr/lib/gcc/aarch64-linux-gnu/13/include/stdbool.h \
  /usr/lib/gcc/aarch64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/aarch64-linux-gnu/bits/wchar.h \
  /usr/include/aarch64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/aarch64-linux-gnu/bits/stdint-least.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/common/ydlidar_def.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/typedef.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/utils.h
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/common/ydlidar_def.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/typedef.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/utils.h

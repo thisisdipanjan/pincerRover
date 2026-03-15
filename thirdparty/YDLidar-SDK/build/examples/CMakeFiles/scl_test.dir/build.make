@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK
+CMAKE_SOURCE_DIR = /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build
+CMAKE_BINARY_DIR = /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build
 
 # Include any dependencies generated for this target.
 include examples/CMakeFiles/scl_test.dir/depend.make
@@ -70,18 +70,18 @@ include examples/CMakeFiles/scl_test.dir/progress.make
 include examples/CMakeFiles/scl_test.dir/flags.make
 
 examples/CMakeFiles/scl_test.dir/scl_test.cpp.o: examples/CMakeFiles/scl_test.dir/flags.make
-examples/CMakeFiles/scl_test.dir/scl_test.cpp.o: /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/examples/scl_test.cpp
+examples/CMakeFiles/scl_test.dir/scl_test.cpp.o: /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/examples/scl_test.cpp
 examples/CMakeFiles/scl_test.dir/scl_test.cpp.o: examples/CMakeFiles/scl_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/scl_test.dir/scl_test.cpp.o"
-	cd /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/CMakeFiles/scl_test.dir/scl_test.cpp.o -MF CMakeFiles/scl_test.dir/scl_test.cpp.o.d -o CMakeFiles/scl_test.dir/scl_test.cpp.o -c /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/examples/scl_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/scl_test.dir/scl_test.cpp.o"
+	cd /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/CMakeFiles/scl_test.dir/scl_test.cpp.o -MF CMakeFiles/scl_test.dir/scl_test.cpp.o.d -o CMakeFiles/scl_test.dir/scl_test.cpp.o -c /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/examples/scl_test.cpp
 
 examples/CMakeFiles/scl_test.dir/scl_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/scl_test.dir/scl_test.cpp.i"
-	cd /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/examples/scl_test.cpp > CMakeFiles/scl_test.dir/scl_test.cpp.i
+	cd /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/examples/scl_test.cpp > CMakeFiles/scl_test.dir/scl_test.cpp.i
 
 examples/CMakeFiles/scl_test.dir/scl_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/scl_test.dir/scl_test.cpp.s"
-	cd /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/examples/scl_test.cpp -o CMakeFiles/scl_test.dir/scl_test.cpp.s
+	cd /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/examples/scl_test.cpp -o CMakeFiles/scl_test.dir/scl_test.cpp.s
 
 # Object files for target scl_test
 scl_test_OBJECTS = \
@@ -94,18 +94,18 @@ scl_test: examples/CMakeFiles/scl_test.dir/scl_test.cpp.o
 scl_test: examples/CMakeFiles/scl_test.dir/build.make
 scl_test: libydlidar_sdk.a
 scl_test: examples/CMakeFiles/scl_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../scl_test"
-	cd /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scl_test.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../scl_test"
+	cd /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scl_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 examples/CMakeFiles/scl_test.dir/build: scl_test
 .PHONY : examples/CMakeFiles/scl_test.dir/build
 
 examples/CMakeFiles/scl_test.dir/clean:
-	cd /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build/examples && $(CMAKE_COMMAND) -P CMakeFiles/scl_test.dir/cmake_clean.cmake
+	cd /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build/examples && $(CMAKE_COMMAND) -P CMakeFiles/scl_test.dir/cmake_clean.cmake
 .PHONY : examples/CMakeFiles/scl_test.dir/clean
 
 examples/CMakeFiles/scl_test.dir/depend:
-	cd /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/examples /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build/examples /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build/examples/CMakeFiles/scl_test.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/examples /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build/examples /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build/examples/CMakeFiles/scl_test.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : examples/CMakeFiles/scl_test.dir/depend
 

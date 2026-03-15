@@ -1,7 +1,7 @@
 CMakeFiles/ydlidar_sdk.dir/core/common/ydlidar_def.cpp.o: \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/common/ydlidar_def.cpp \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/common/ydlidar_def.cpp \
  /usr/include/stdc-predef.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/common/ydlidar_def.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/common/ydlidar_def.h \
  /usr/lib/gcc/aarch64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -52,6 +52,6 @@ CMakeFiles/ydlidar_sdk.dir/core/common/ydlidar_def.cpp.o: \
  /usr/include/aarch64-linux-gnu/bits/struct_rwlock.h \
  /usr/include/alloca.h /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/13/bits/std_abs.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/typedef.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/utils.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/typedef.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/utils.h \
  /usr/include/string.h /usr/include/strings.h

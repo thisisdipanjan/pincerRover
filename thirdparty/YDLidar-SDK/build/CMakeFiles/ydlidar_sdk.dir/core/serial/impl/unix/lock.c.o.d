@@ -1,7 +1,7 @@
 CMakeFiles/ydlidar_sdk.dir/core/serial/impl/unix/lock.c.o: \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/serial/impl/unix/lock.c \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/serial/impl/unix/lock.c \
  /usr/include/stdc-predef.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/serial/impl/unix/lock.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/serial/impl/unix/lock.h \
  /usr/include/linux/types.h /usr/include/aarch64-linux-gnu/asm/types.h \
  /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
  /usr/include/aarch64-linux-gnu/asm/bitsperlong.h \

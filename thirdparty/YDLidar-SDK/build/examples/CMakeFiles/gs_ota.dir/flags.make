@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/. -I/home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core -I/home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/src -I/home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK -I/home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/.. -I/home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build/examples -I/home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build
+CXX_INCLUDES = -I/home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/. -I/home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core -I/home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/src -I/home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK -I/home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/.. -I/home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build/examples -I/home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/build
 
 CXX_FLAGS =  -std=c++11 -fPIC -std=c++11
 

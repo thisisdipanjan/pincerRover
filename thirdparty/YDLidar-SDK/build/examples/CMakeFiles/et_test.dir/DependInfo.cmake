@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/examples/et_test.cpp" "examples/CMakeFiles/et_test.dir/et_test.cpp.o" "gcc" "examples/CMakeFiles/et_test.dir/et_test.cpp.o.d"
+  "/home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/examples/et_test.cpp" "examples/CMakeFiles/et_test.dir/et_test.cpp.o" "gcc" "examples/CMakeFiles/et_test.dir/et_test.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/examples/lidar_c_api_test.c" "examples/CMakeFiles/lidar_c_api_test.dir/lidar_c_api_test.c.o" "gcc" "examples/CMakeFiles/lidar_c_api_test.dir/lidar_c_api_test.c.o.d"
+  "/home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/examples/lidar_c_api_test.c" "examples/CMakeFiles/lidar_c_api_test.dir/lidar_c_api_test.c.o" "gcc" "examples/CMakeFiles/lidar_c_api_test.dir/lidar_c_api_test.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -31,9 +31,9 @@ class AckermannNode(Node):
     SERVO_LIMITS = {
         "steering": (40.0, 150.0, 95.0),
         "waist":    (0.0, 160.0, 70.0),
-        "shoulder": (110.0, 165.0, 160.0),
-        "wrist":    (35.0, 150.0, 145.0),
-        "gripper":  (20.0, 120.0, 60.0),
+        "shoulder": (10.0, 160.0, 110.0),
+        "wrist":    (60.0, 165.0, 165.0),
+        "gripper":  (60.0, 70.0, 65.0), 
     }
 
     def __init__(self):
@@ -171,6 +171,7 @@ class AckermannNode(Node):
     def _servo_cmd(self, channel, angle, name):
         mn, mx, _ = self.SERVO_LIMITS[name]
         angle = max(mn, min(mx, angle))
+        # print(angle)
         self._enqueue(self._set_angle, channel, angle)
 
 

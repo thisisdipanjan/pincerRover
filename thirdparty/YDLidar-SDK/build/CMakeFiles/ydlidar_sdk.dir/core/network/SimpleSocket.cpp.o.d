@@ -1,7 +1,7 @@
 CMakeFiles/ydlidar_sdk.dir/core/network/SimpleSocket.cpp.o: \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/network/SimpleSocket.cpp \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/network/SimpleSocket.cpp \
  /usr/include/stdc-predef.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/network/SimpleSocket.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/network/SimpleSocket.h \
  /usr/include/aarch64-linux-gnu/sys/stat.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/aarch64-linux-gnu/bits/wordsize.h \
@@ -162,10 +162,10 @@ CMakeFiles/ydlidar_sdk.dir/core/network/SimpleSocket.cpp.o: \
  /usr/include/asm-generic/ioctl.h \
  /usr/include/aarch64-linux-gnu/bits/ioctl-types.h \
  /usr/include/aarch64-linux-gnu/sys/ttydefaults.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/network/StatTimer.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/core/network/StatTimer.h \
  /usr/include/string.h /usr/include/strings.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/v8stdint.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/datatype.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/v8stdint.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/datatype.h \
  /usr/include/c++/13/string /usr/include/c++/13/bits/char_traits.h \
  /usr/include/c++/13/bits/allocator.h \
  /usr/include/aarch64-linux-gnu/c++/13/bits/c++allocator.h \
@@ -231,6 +231,6 @@ CMakeFiles/ydlidar_sdk.dir/core/network/SimpleSocket.cpp.o: \
  /usr/include/c++/13/bits/cxxabi_init_exception.h \
  /usr/include/c++/13/typeinfo /usr/include/c++/13/bits/nested_exception.h \
  /usr/include/c++/13/csignal \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/typedef.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/ydlidar.h \
- /home/ubuntu/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/common/ChannelDevice.h
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/typedef.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/base/ydlidar.h \
+ /home/rpi5/pincer_ws/src/pincerRover/thirdparty/YDLidar-SDK/./core/common/ChannelDevice.h
