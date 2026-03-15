@@ -1,0 +1,2 @@
+[console_scripts]
+drive_servo_node = ackermann_drive_servo_arm.drive_servo:main
