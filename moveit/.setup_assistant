@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: pincer_gripper_description
+    relative_path: urdf/pincer.urdf.xacro
+  srdf:
+    relative_path: config/ackermann_arm_rover.srdf
+  package_settings:
+    author_name: Dipanjan Maji
+    author_email: thisisdipanjan@gmail.com
+    generated_timestamp: 1773670581
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

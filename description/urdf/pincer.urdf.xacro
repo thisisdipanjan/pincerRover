@@ -1,0 +1,329 @@
+<?xml version="1.0"?>
+<robot name="ackermann_arm_rover" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- PARAMETERS -->
+
+  <xacro:property name="wheel_radius" value="0.035"/>
+  <xacro:property name="wheel_width" value="0.025"/>
+
+  <xacro:property name="wheel_base" value="0.173"/>
+  <xacro:property name="track_width" value="0.177"/>
+
+  <xacro:property name="chassis_length" value="0.27"/>
+  <xacro:property name="chassis_width" value="0.12"/>
+  <xacro:property name="chassis_height" value="0.055"/>
+
+  <!-- Colors -->
+  <material name="red">
+  <color rgba="0.1 0.1 0.1 1"/>
+  </material>
+
+  <material name="green">
+    <color rgba="0.02 0.02 0.02 1"/>
+  </material>
+
+  <material name="blue">
+    <color rgba="0.2 0.2 0.8 1"/>
+  </material>
+
+  <material name="black">
+    <color rgba="0.8 0.5 0.1 1"/>
+  </material>
+
+  <material name="white">
+    <color rgba="0.8 0.2 0.2 1"/>
+  </material>
+
+  <material name="grey">
+  <color rgba="0.5 0.5 0.5 1"/>
+  </material> 
+
+  <!-- ROOT LINK (required for KDL) -->
+
+  <link name="base_footprint"/>
+
+  <joint name="base_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+  </joint>
+
+
+  <!-- BASE LINK -->
+
+  <link name="base_link">
+
+    <visual>
+      <geometry>
+        <box size="${chassis_length} ${chassis_width} ${chassis_height}"/>
+      </geometry>
+      <origin xyz="0 0 ${chassis_height/2}"/>
+      <material name="green"/>
+    </visual>
+
+    <collision>
+      <geometry>
+        <box size="${chassis_length} ${chassis_width} ${chassis_height}"/>
+      </geometry>
+      <origin xyz="0 0 ${chassis_height/2}"/>
+    </collision>
+
+    <inertial>
+      <mass value="2.0"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.01" iyy="0.01" izz="0.02"
+               ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+
+  </link>
+
+
+  <!-- WHEEL MACRO -->
+
+  <xacro:macro name="wheel" params="name parent x y">
+
+    <link name="${name}_wheel">
+
+      <visual>
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="${wheel_width}"/>
+        </geometry>
+        <origin rpy="1.5707 0 0"/>
+      </visual>
+
+      <collision>
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="${wheel_width}"/>
+        </geometry>
+        <origin rpy="1.5707 0 0"/>
+      </collision>
+
+      <inertial>
+        <mass value="0.1"/>
+        <inertia ixx="0.0001" iyy="0.0001" izz="0.0001"
+                 ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+
+    </link>
+
+    <joint name="${name}_wheel_joint" type="continuous">
+      <parent link="${parent}"/>
+      <child link="${name}_wheel"/>
+      <origin xyz="${x} ${y} 0"/>
+      <axis xyz="0 1 0"/>
+    </joint>
+
+  </xacro:macro>
+
+
+  <!-- STEERING WHEEL MACRO -->
+
+  <xacro:macro name="steering_wheel" params="name x y">
+
+    <link name="${name}_steer_link">
+
+      <visual>
+        <geometry>
+          <box size="0.02 0.02 0.02"/>
+        </geometry>
+      </visual>
+
+      <collision>
+        <geometry>
+          <box size="0.02 0.02 0.02"/>
+        </geometry>
+      </collision>
+
+    </link>
+
+    <joint name="${name}_steer_joint" type="revolute">
+      <parent link="base_link"/>
+      <child link="${name}_steer_link"/>
+      <origin xyz="${x} ${y} 0"/>
+      <axis xyz="0 0 1"/>
+      <limit lower="-0.6" upper="0.6" effort="10" velocity="1"/>
+    </joint>
+
+    <xacro:wheel name="${name}" parent="${name}_steer_link" x="0" y="0"/>
+
+  </xacro:macro>
+
+
+  <!-- REAR DRIVE WHEELS -->
+
+  <xacro:wheel name="rear_left"
+               parent="base_link"
+               x="-${wheel_base/2}"
+               y="${track_width/2}"/>
+
+  <xacro:wheel name="rear_right"
+               parent="base_link"
+               x="-${wheel_base/2}"
+               y="-${track_width/2}"/>
+
+
+  <!-- FRONT STEERING WHEELS -->
+
+  <xacro:steering_wheel name="front_left"
+                        x="${wheel_base/2}"
+                        y="${track_width/2}"/>
+
+  <xacro:steering_wheel name="front_right"
+                        x="${wheel_base/2}"
+                        y="-${track_width/2}"/>
+
+
+  <!-- LIDAR -->
+
+  <link name="lidar_link">
+    <visual>
+      <geometry>
+        <cylinder radius="0.03" length="0.02"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <geometry>
+        <cylinder radius="0.03" length="0.02"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar_link"/>
+    <origin xyz="${chassis_length/2-0.07} 0 ${chassis_height}"/>
+  </joint>
+
+
+  <!-- IMU -->
+
+  <link name="imu_link">
+    <visual>
+      <geometry>
+        <box size="0.02 0.02 0.01"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <geometry>
+        <box size="0.02 0.02 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="imu_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+    <origin xyz="0 0.05 ${chassis_height}"/>
+  </joint>
+
+
+  <!-- ARM BASE -->
+
+  <link name="waist_link">
+    <visual>
+      <geometry>
+        <cylinder radius="0.02" length="0.09"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+
+    <collision>
+      <geometry>
+        <cylinder radius="0.02" length="0.09"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="waist_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="waist_link"/>
+    <origin xyz="-${chassis_length/2-0.03} 0 ${chassis_height}" rpy="0 0 3.1416"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-3.14" upper="3.14" effort="20" velocity="1"/>
+  </joint>
+
+
+  <!-- SHOULDER -->
+
+  <link name="shoulder_link">
+
+    <visual>
+      <geometry>
+        <cylinder radius="0.02" length="0.1"/>
+      </geometry>
+      <origin xyz="0 0 0.05"/>
+      <material name="white"/>
+    </visual>
+
+    <collision>
+      <geometry>
+        <cylinder radius="0.02" length="0.1"/>
+      </geometry>
+      <origin xyz="0 0 0.05"/>
+    </collision>
+
+  </link>
+
+  <joint name="shoulder_joint" type="revolute">
+    <parent link="waist_link"/>
+    <child link="shoulder_link"/>
+    <origin xyz="0 0 0.05"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.5" upper="1.5" effort="20" velocity="1"/>
+  </joint>
+
+
+  <!-- WRIST -->
+
+  <link name="wrist_link">
+
+    <visual>
+      <geometry>
+        <cylinder radius="0.02" length="0.07"/>
+      </geometry>
+      <origin xyz="0 0 0.035"/>
+      <material name="grey"/>
+    </visual>
+
+    <collision>
+      <geometry>
+        <cylinder radius="0.02" length="0.07"/>
+      </geometry>
+      <origin xyz="0 0 0.035"/>
+    </collision>
+
+  </link>
+
+  <joint name="wrist_joint" type="revolute">
+    <parent link="shoulder_link"/>
+    <child link="wrist_link"/>
+    <origin xyz="0 0 0.1"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1" upper="2.1" effort="10" velocity="1"/>
+  </joint>
+
+
+  <!-- GRIPPER -->
+
+  <link name="gripper_base">
+    <visual>
+      <geometry>
+        <box size="0.05 0.01 0.01"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <geometry>
+        <box size="0.05 0.01 0.01"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="gripper_joint" type="fixed">
+    <parent link="wrist_link"/>
+    <child link="gripper_base"/>
+    <origin xyz="0 0 0.08"/>
+  </joint>
+
+</robot>

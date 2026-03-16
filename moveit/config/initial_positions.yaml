@@ -1,0 +1,6 @@
+# Default initial positions for ackermann_arm_rover's ros2_control fake system
+
+initial_positions:
+  shoulder_joint: 0
+  waist_joint: 0
+  wrist_joint: 0
