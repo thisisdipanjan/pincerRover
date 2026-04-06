@@ -13,6 +13,10 @@
   MG996R steering servo
   12V battery supply with buck converters
 
+  
+![shared image(1)](https://github.com/user-attachments/assets/eeaa125e-97ad-4145-b89e-8e0d9245cc8b)
+
+
 4-DOF Arm
 
   MG996R servos for base, shoulder, elbow
