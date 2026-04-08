@@ -1,3 +1,6 @@
 [submodule "perception/planar_lidar_safety_field"]
 	path = perception/planar_lidar_safety_field
 	url = git@github.com:thisisdipanjan/planar_lidar_safety_field.git
+[submodule "navigation/geodesic_navigation_algorithms"]
+	path = navigation/geodesic_navigation_algorithms
+	url = git@github.com:thisisdipanjan/geodesic_navigation_algorithms.git
